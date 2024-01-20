@@ -1,0 +1,17 @@
+{
+  "name": "mysteno",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "wix.vscode-import-cost",
+        "formulahendry.auto-rename-tag"
+      ]
+    }
+  },
+  "containerEnv": {
+    "TZ": "Asia/Tokyo"
+  },
+  "postCreateCommand": "/bin/sh .devcontainer/postCreateCommand.sh"
+}
