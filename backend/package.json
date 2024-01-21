@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "bun run --watch server.ts",
-    "build": "bun-vercel ./src/main.ts"
+    "build": "bun build ./src/main.ts --outdir ./out"
   },
   "dependencies": {},
   "devDependencies": {
