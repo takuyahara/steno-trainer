@@ -1,9 +1,11 @@
 {
   "scripts": {
-    "dev": "bun run --watch server.ts"
+    "dev": "bun run --watch server.ts",
+    "build": "bun-vercel ./src/main.ts"
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/bun": "^1.0.2"
+    "@types/bun": "^1.0.2",
+    "bun-vercel": "^1.0.0-alpha.5"
   }
 }

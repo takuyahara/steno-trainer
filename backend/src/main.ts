@@ -1,8 +1,9 @@
+import { type Server } from "bun";
 import { find } from "./api";
 
 Bun.serve({
-  fetch(req) {
-    const url = new URL(req.url);
+  fetch(request: Request, server: Server) {
+    const url = new URL(request.url);
     if (!url.pathname.startsWith("/q/")) {
       return new Response("404", {
         status: 404,
@@ -16,7 +17,7 @@ Bun.serve({
     console.log(json);
     return new Response(json, {
       headers: {
-        "Access-Control-Allow-Origin": "http://localhost:5173",
+        // "Access-Control-Allow-Origin": "http://localhost:5173",
         "Content-Type": "application/json;charset=utf-8",
       },
     });

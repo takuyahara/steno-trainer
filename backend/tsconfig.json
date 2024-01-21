@@ -7,5 +7,5 @@
     "target": "ES2015",
     "moduleResolution": "Bundler"
   },
-  "include": ["./server.ts", "api/**/*.ts"]
+  "include": ["src/main.ts", "src/api/**/*.ts"]
 }

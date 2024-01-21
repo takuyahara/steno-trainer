@@ -1,4 +1,4 @@
-import main from "../../main.json";
+import main from "../../../main.json";
 
 /**
  * Validate if corresponding steno code exists.
