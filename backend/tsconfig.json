@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "noEmit": true,
+    "target": "ES2015",
+    "moduleResolution": "Bundler"
+  },
+  "include": ["./server.ts", "api/**/*.ts"]
+}

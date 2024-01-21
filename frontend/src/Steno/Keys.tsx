@@ -27,7 +27,7 @@ type Keys = {
   "#": boolean;
 };
 
-const VALID_KEYS = new Set([
+const VALID_KEYS: ReadonlySet<string> = new Set([
   "S",
   "T",
   "K",

@@ -3,6 +3,7 @@ import { TypedProvider } from "./TypedProvider";
 import Typing from "./Typing";
 import TypeSheet from "./TypeSheet";
 import Result from "./Result";
+
 function Steno() {
   return (
     <>

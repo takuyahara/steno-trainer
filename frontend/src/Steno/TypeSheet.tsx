@@ -1,6 +1,5 @@
-import { createSignal, createEffect, JSX, Show } from "solid-js";
+import { createSignal, createEffect, JSX } from "solid-js";
 import { useTyped } from "./TypedProvider";
-import { ConfettiExplosion } from "solid-confetti-explosion";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
@@ -23,8 +22,7 @@ const STYLES: Record<string, JSX.CSSProperties> = {
 function TypeSheet() {
   gsap.registerPlugin(ScrollToPlugin);
   const [styles, setStyles] = createSignal<JSX.CSSProperties[]>([]);
-  const [done, setDone] = createSignal(false);
-  const { text, typed, words } = useTyped()!;
+  const { text, typed, words, setDone } = useTyped()!;
   let prevPosId = 0;
   createEffect(() => {
     const b: JSX.CSSProperties[] = new Array(text().length).fill(STYLES.NotYet);
@@ -101,17 +99,6 @@ function TypeSheet() {
         .map((_, i) => (
           <span style={styles().at(i)}>{text().at(i)}</span>
         ))}
-      <Show when={done()}>
-        <div
-          style={{
-            position: "fixed",
-            top: "50%",
-            left: "50%",
-          }}
-        >
-          <ConfettiExplosion />
-        </div>
-      </Show>
     </div>
   );
 }
