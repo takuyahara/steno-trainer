@@ -52,6 +52,6 @@ func CamelCase(s string) []string {
 // })()
 
 func Symbol(s string) []string {
-	return []string{}
+	return []string{s}
 	// return reSymbol.FindAllStringSubmatch(s, -1)[1]
 }

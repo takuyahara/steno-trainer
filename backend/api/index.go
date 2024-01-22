@@ -8,7 +8,7 @@ import (
 )
 
 func Handler(w http.ResponseWriter, r *http.Request) {
-	query := r.URL.Path[5:]
+	query := r.URL.Query().Get("q")
 	log.Println(query)
 	result, err := steno.Find(query).Compress()
 	if err != nil {

@@ -16,7 +16,8 @@ function Result() {
     }
     const response = await fetch(
       // "http://localhost:3000/q/" + encodeURIComponent(text())
-      "https://backend-puce-seven.vercel.app/api/" + encodeURIComponent(text()),
+      "https://backend-puce-seven.vercel.app/api/?q=" +
+        encodeURIComponent(text()),
       {
         mode: "cors",
       }
