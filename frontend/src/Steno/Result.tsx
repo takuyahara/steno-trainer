@@ -15,7 +15,11 @@ function Result() {
       return;
     }
     const response = await fetch(
-      "http://localhost:3000/q/" + encodeURIComponent(text())
+      // "http://localhost:3000/q/" + encodeURIComponent(text())
+      "https://backend-puce-seven.vercel.app/api/" + encodeURIComponent(text()),
+      {
+        mode: "cors",
+      }
     );
     const result: MyResult[] = await response.json();
     setRes(result);

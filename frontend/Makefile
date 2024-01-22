@@ -1,9 +1,14 @@
+.SILENT:
+.PHONY: install
+## installgit-flowのReleaseブランチ名より、バージョン番号を各種ファイルへ反映します。
+install:
+	pnpm install
 
 .SILENT:
-.PHONY: version
-## git-flowのReleaseブランチ名より、バージョン番号を各種ファイルへ反映します。
-version: _version-readme
-	echo バージョンを $(VERSION) へ更新しました。
+.PHONY: dev
+## dev
+dev:
+	pnpm run dev
 
 .DEFAULT_GOAL := help
 .SILENT:
