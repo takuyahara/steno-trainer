@@ -1,13 +1,12 @@
 {
   "name": "backend",
-  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye",
+  "image": "mcr.microsoft.com/devcontainers/go:1-1.21-bullseye",
+  "features": {
+		"ghcr.io/devcontainers/features/node:1": {}
+	},
   "customizations": {
     "vscode": {
-      "extensions": [
-        "esbenp.prettier-vscode",
-        "wix.vscode-import-cost",
-        "oven.bun-vscode"
-      ]
+      "extensions": ["golang.go", "esbenp.prettier-vscode"]
     }
   },
   "containerEnv": {

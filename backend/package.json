@@ -1,12 +1,5 @@
 {
-  "scripts": {
-    "dev": "bun run --watch ./src/main.ts",
-    "build0": "bun build ./src/main.ts --outdir ./out --minify --target node",
-    "build": "bun-vercel ./src/main.ts"
-  },
-  "dependencies": {},
   "devDependencies": {
-    "@types/bun": "^1.0.2",
-    "bun-vercel": "^1.0.0-alpha.5"
+    "vercel": "^33.2.0"
   }
 }
